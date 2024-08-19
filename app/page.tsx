@@ -36,7 +36,7 @@ export default function Home() {
                 // getCatbyId((res[step].id)).then(res => {
                 //     console.log('getById:',res)
                 // })
-                // getCatbyId(res.[step].id {[detail]: string})
+                // getCatbyId(res.[step].id {detail: string})
                 // catsN.push(res[step].id)
             // }
             // setCatsNames(res.id)

@@ -4,7 +4,7 @@ import {getCatbyId} from "@/utils/api";
 
 // @ts-ignore
 export default function DetailShow({params}) {
-
+    
     useEffect(() => {
         console.log(params)
         getCatbyId(params).then(res => {
