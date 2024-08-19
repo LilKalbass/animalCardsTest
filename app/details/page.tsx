@@ -6,7 +6,7 @@ export default function Details() {
         <div>
             {/*<DetailedInfo   />*/}
             <Link href='/'>
-                Get HomeE
+                Get HomeEE
             </Link>
         </div>
     )
