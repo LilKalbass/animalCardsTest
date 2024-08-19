@@ -7,7 +7,7 @@ export default function Details() {
         <div>
             {/*<DetailedInfo   />*/}
             <Link href='/'>
-                Get Home
+                Get HomeE
             </Link>
         </div>
     )
