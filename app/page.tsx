@@ -3,7 +3,13 @@
 import {fetchCatImg, fetchDogImg, getCatImgbyId} from "@/utils/api";
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import {Breed} from "@/app/components/Breed";
+import {Breed} from "@/app/breed/Breed";
+
+// const UserProfileRoute = ({ params }: { params: { user: string } }) => {
+//     const username = params.user;
+//     return <h2>This is {username}</h2>;
+// };
+// export default UserProfileRoute
 
 export default function Home() {
     const [imgUrl, setUrl] = useState(``)
@@ -30,7 +36,7 @@ export default function Home() {
                 // getCatbyId((res[step].id)).then(res => {
                 //     console.log('getById:',res)
                 // })
-                // getCatbyId(res.[step].id {breed: string})
+                // getCatbyId(res.[step].id {[detail]: string})
                 // catsN.push(res[step].id)
             // }
             // setCatsNames(res.id)

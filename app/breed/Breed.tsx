@@ -10,18 +10,18 @@ export const Breed = ({breed}: { breed: any[]}) => {
     const [card,setCard] = useState([])
     const [detail, setDetail] = useState([])
     // useEffect(() => {
-    //     // for (let step = 0; breed.length > step; step++) {
-    //     //     getCatbyId(breed.id[step]).then(res => {
+    //     // for (let step = 0; [detail].length > step; step++) {
+    //     //     getCatbyId([detail].id[step]).then(res => {
     //     //         setCatsNames.push(res)
     //     //     })
     //     // }
-    //     {breed.map((breed) => {
-    //         getCatbyId(breed.id).then(res => {
+    //     {[detail].map(([detail]) => {
+    //         getCatbyId([detail].id).then(res => {
     //                      console.log("ff",res)
     //
     //         })
     //     })}
-        // getCatbyId(breed).then(res => {
+        // getCatbyId([detail]).then(res => {
         //     // setUrl(res.url)
         //     // setName(res.breeds[0].name)
         //     console.log('qwe',res.breeds)
@@ -35,12 +35,12 @@ export const Breed = ({breed}: { breed: any[]}) => {
         let f: string[] = []
         let d: string[] = []
             for (let step = 0; breed?.length > step; step++) {
-                // console.log('CatsID`s from BReedPage:', breed[step]?.id)
+                // console.log('CatsID`s from BReedPage:', [detail][step]?.id)
                 getCatbyId(breed[step]?.id)
                     .then(r => {
                         console.log('getCatbyId:',r)
                         n.push(r.breeds[0].name)
-                        d.push(r.breeds[0])
+                        d.push(r.id)
                         if (n.length == 10) {
                             // @ts-ignore
                             setName(n)
@@ -72,6 +72,10 @@ export const Breed = ({breed}: { breed: any[]}) => {
             console.log(name)
     },[breed])
 
+    const handleNavigate = () => {
+        console.log('qwe')
+    }
+
     return (
         <div className='flex flex-nowrap py-8'>
             {/*<p>{catsNames}</p>*/}
@@ -83,7 +87,7 @@ export const Breed = ({breed}: { breed: any[]}) => {
                                 <div className='flex flex-col items-center justify-start min-h-[260px] gap-y-2 cursor-pointer'>
                                     <Image src={index.url} alt='qwe' width={220} height={80} className='h-[140px]'/>
                                     {/*<p>{index?.name}</p>*/}
-                                    <Link href='/details'>
+                                    <Link href={`/${detail[idN]}`}>
                                         <p className='flex text-center'>{name[idN]}</p>
                                     </Link>
                                     <div className='hidden'>

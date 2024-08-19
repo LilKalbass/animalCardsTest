@@ -36,3 +36,11 @@ export const getDogbyId = async (breed: { breed: any }) => {
     console.log("URL_BY_ID_DOgs:",res.data)
     return (res.data)
 }
+
+export const getCatbyIdx = async (url: { url: any }) => {
+    console.log('GetCatBreedURL:', url)
+
+    const res = await axios.get(`${url}`)
+    console.log("URL_BY_ID_CAts:",res.data)
+    return (res.data)
+}
