@@ -60,8 +60,10 @@ export const Breed = ({breed}: { breed: any[]}) => {
                         console.log('getDogbyId:',r)
                         n.push(r.breeds[0].name)
                         if (n.length == 10) {
+                            // @ts-ignore
                             setName(n)
                             f = n.concat(breed)
+                            // @ts-ignore
                             setCard(f)
                             console.log('CArd:',f)
                         }

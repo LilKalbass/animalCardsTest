@@ -5,7 +5,7 @@ import {DetailedInfo} from "@/app/components/DetailedInfo";
 export default function Details() {
     return (
         <div>
-            <DetailedInfo   />
+            {/*<DetailedInfo   />*/}
             <Link href='/'>
                 Get Home
             </Link>
