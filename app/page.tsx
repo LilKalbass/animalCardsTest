@@ -1,10 +1,8 @@
 'use client'
 
-import {fetchCatBreed, fetchCatImg, fetchDogImg, getCatbyId, getCatImgbyId} from "@/utils/api";
-import axios from "axios";
+import {fetchCatImg, fetchDogImg, getCatImgbyId} from "@/utils/api";
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import Link from "next/link";
 import {Breed} from "@/app/components/Breed";
 
 export default function Home() {
