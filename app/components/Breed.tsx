@@ -31,9 +31,9 @@ export const Breed = ({breed}: { breed: any[]}) => {
 
     useEffect(() => {
              console.log("WQEQWEQW", breed)
-        let n = []
-        let f = []
-        let d = []
+        let n: string[] = []
+        let f: string[] = []
+        let d: string[] = []
             for (let step = 0; breed?.length > step; step++) {
                 // console.log('CatsID`s from BReedPage:', breed[step]?.id)
                 getCatbyId(breed[step]?.id)
@@ -42,12 +42,15 @@ export const Breed = ({breed}: { breed: any[]}) => {
                         n.push(r.breeds[0].name)
                         d.push(r.breeds[0])
                         if (n.length == 10) {
+                            // @ts-ignore
                             setName(n)
                             f = n.concat(breed)
+                            // @ts-ignore
                             setCard(f)
                             console.log('CArd:',f)
                         }
                         if (d.length == 10) {
+                            // @ts-ignore
                             setDetail(d)
                             console.log('Details:', d)
                         }
