@@ -6,7 +6,7 @@ import {ShortInf} from "@/app/components/ShortInf";
 
 export const DetailedInfo = ({ breed, img }: { breed: any[], img: string}) => {
     return (
-        <section>
+        <section className = 'pb-8'>
             <div className='flex justify-center pb-8'>
                 <h1 className='text-[36px]'>Detailed Info</h1>
             </div>
