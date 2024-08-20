@@ -1,10 +1,7 @@
 import { useRouter } from 'next/router'
 import {useEffect, useState} from "react";
-import {getCatbyId} from "@/utils/api";
-import axios from "axios";
 import {DetailedInfo} from "@/app/components/DetailedInfo";
 
-// @ts-ignore
 export default function DetailShow() {
 
     const router = useRouter()
