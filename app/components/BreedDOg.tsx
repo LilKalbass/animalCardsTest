@@ -38,7 +38,7 @@ export const BreedDOg = ({breed}: { breed: any[]}) => {
                             <div className='flex px-4 shadow-2xl max-h-[220px] items-center justify-between rounded-2xl hover:scale-105 transition-all'>
                                 <Link href={`detail/${dog.id}`}>
                                     <div className='flex flex-col items-center justify-start min-h-[260px] gap-y-2 cursor-pointer'>
-                                        <Image src={dog.url} alt='qwe' width={220} height={80} className='h-[160px] rounded-2xl '/>
+                                        <Image src={dog.url} alt='qwe' width={220} height={80} className='h-[160px] rounded-2xl ' loading='lazy'/>
                                         <p className='flex text-center text-[18px]'>{names[idN]}</p>
                                     </div>
                                 </Link>
