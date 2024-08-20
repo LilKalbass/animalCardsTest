@@ -6,7 +6,10 @@ import {ShortInf} from "@/app/components/ShortInf";
 
 export const DetailedInfo = ({ breed, img }: { breed: any[], img: string}) => {
     return (
-        <section className='flex py-10'>
+        <section>
+            <div className='flex justify-center pb-8'>
+                <h1 className='text-[36px]'>Detailed Info</h1>
+            </div>
             <div className='container mx-auto'>
                 {breed.map((index => {
                     return (
