@@ -1,21 +1,27 @@
 'use client'
 
 import {fetchCatImg, fetchDogImg} from "@/utils/api";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {BreedCat} from "@/app/components/BreedCat";
 import {BreedDOg} from "@/app/components/BreedDOg";
 export default function Home() {
     const [catImages, setCatImages] = useState<string[]>([]);
     const [dogImages, setDogImages] = useState<string[]>([]);
+    const isMounted = useRef(false);
 
     useEffect(() => {
-        fetchCatImg().then((res: string[]) => {
-            setCatImages(res);
-        });
+        if (!isMounted.current) {
+            isMounted.current = true;
 
-        fetchDogImg().then((res: string[]) => {
-            setDogImages(res);
-        });
+            fetchCatImg().then((res: string[]) => {
+                // console.log('OMG',res)
+                setCatImages(res);
+            });
+
+            fetchDogImg().then((res: string[]) => {
+                setDogImages(res);
+            });
+        }
     }, []);
 
     return (

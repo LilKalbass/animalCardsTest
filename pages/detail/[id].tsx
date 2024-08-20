@@ -11,6 +11,7 @@ export default function DetailShow() {
 
     useEffect(() => {
         if (id) {
+            console.log(id)
             const accessDetails = async () => {
                 let DogeOrKote;
                 try {

@@ -19,7 +19,7 @@ export const DetailedInfo = ({ breed, img }: { breed: any[], img: string}) => {
                                 <h2 className= 'text-[40px]'>{index.name}</h2>
                             </div>
                             <div className=' xl:max-w-[30%] w-full flex flex-col gap-y-4'>
-                                <div className='flex gap-y-2 flex-col justify-center items-center' >
+                                <div className='flex gap-y-2 flex-col justify-center items-center'>
                                     <h2 className='text-2xl'>Temperament:</h2>
                                     <p className='text-center text-[20px]'>{index.temperament}</p>
                                 </div>
